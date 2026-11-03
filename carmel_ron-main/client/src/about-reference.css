@@ -1,0 +1,570 @@
+.about-reference {
+  color: #3d3024;
+  background: #fff;
+  font-family: Inter, sans-serif;
+}
+
+.about-reference * {
+  box-sizing: border-box;
+}
+
+.about-reference-container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.about-reference-top {
+  overflow: hidden;
+  background: #fff;
+}
+
+.about-reference-hero {
+  position: relative;
+  display: flex;
+  min-height: 306px;
+  align-items: center;
+  padding: 50px 48px;
+}
+
+.about-reference-hero-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 620px;
+  text-align: left;
+}
+
+.about-reference-hero h1 {
+  margin: 0 0 4px;
+  color: #1a1008;
+  font-family: Raleway, Inter, sans-serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-reference-hero h1 em {
+  color: #d3a05f;
+  font-family: Lora, Georgia, serif;
+  font-weight: 500;
+}
+
+.about-reference-description {
+  max-width: 620px;
+  margin: 0 0 18px;
+  color: #3d3024;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.about-reference-button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: #704214;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.about-reference-button:hover {
+  transform: translateY(-2px);
+  background: #5a3510;
+}
+
+.about-reference-aim {
+  padding: 104px 0;
+  background: #37200b;
+  box-shadow: inset 0 -70px 80px rgba(112, 66, 20, 0.25);
+}
+
+.about-reference-aim-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 0 40px;
+}
+
+.about-reference-aim-content > div,
+.about-reference-aim-content > h3 {
+  flex: 1;
+}
+
+.about-reference-aim .about-reference-eyebrow {
+  color: #c9a87c;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+.about-reference-aim h2 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: Raleway, Inter, sans-serif;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.about-reference-aim p {
+  max-width: 430px;
+  margin: 0;
+  color: #c9a87c;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.about-reference-aim h3 {
+  margin: 0;
+  color: #f5ebe5;
+  font-family: Raleway, Inter, sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1.12;
+}
+
+.about-reference-spirituality {
+  display: grid;
+  width: min(1000px, calc(100% - 64px));
+  min-height: 500px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 72px;
+  margin: 0 auto;
+  padding: 76px 0 88px;
+}
+
+.about-reference-spirituality-copy {
+  max-width: 410px;
+  justify-self: center;
+  color: #817264;
+  font-family: Lora, Georgia, serif;
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: justify;
+}
+
+.about-reference-spirituality-copy p {
+  margin: 0;
+}
+
+.about-reference-spirituality-copy em {
+  color: #a2672d;
+}
+
+.about-reference-spirituality-copy > span {
+  display: block;
+  margin-top: 40px;
+  color: #a2672d;
+  font-size: 14px;
+  font-style: italic;
+  text-align: right;
+  transform: rotate(-7deg);
+}
+
+.about-reference-spirituality-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 430px;
+  height: 370px;
+  align-self: center;
+  justify-self: end;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 0 72px 8px 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-reference-spirituality-card > img,
+.about-reference-spirituality-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-reference-spirituality-card > img {
+  object-fit: cover;
+}
+
+.about-reference-spirituality-overlay {
+  background: linear-gradient(180deg, transparent 45%, rgba(30, 23, 16, .68));
+}
+
+.about-reference-spirituality-title,
+.about-reference-spirituality-link {
+  position: relative;
+  z-index: 1;
+  margin-inline: 20px;
+}
+
+.about-reference-spirituality-title {
+  font-family: Lora, Georgia, serif;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.about-reference-spirituality-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  margin-bottom: 18px;
+  font-size: 9px;
+}
+
+.about-reference-photo-section {
+  background: #fff;
+}
+
+.about-reference-photo-section .about-reference-container {
+  width: min(1112px, calc(100% - 44px));
+}
+
+.about-reference-photo-section img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-reference-photo-section p {
+  margin: 0;
+  padding: 20px 20px 54px;
+  color: #8b7355;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.about-reference-officers img {
+  height: 500px;
+  object-position: center 40%;
+}
+
+.about-reference-purposes {
+  padding: 70px 0 64px;
+  background: #f5f0eb;
+}
+
+.about-reference-purposes-heading {
+  margin-bottom: 32px;
+  padding: 0 20px;
+}
+
+.about-reference-purposes-heading .about-reference-eyebrow {
+  margin-bottom: 8px;
+  font-size: 9px;
+}
+
+.about-reference-purposes-heading h2 {
+  margin: 0 0 6px;
+  color: #1a1008;
+  font-family: Raleway, Inter, sans-serif;
+  font-size: 42px;
+}
+
+.about-reference-divider {
+  display: block;
+  width: 66px;
+  height: 2px;
+  background: #a2672d;
+}
+
+.about-reference-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  padding: 0 20px;
+}
+
+.about-reference-purpose-card {
+  display: flex;
+  min-height: 420px;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(26, 16, 8, 0.13);
+}
+
+.about-reference-purpose-image {
+  height: 170px;
+}
+
+.about-reference-purpose-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-reference-purpose-accent {
+  height: 4px;
+}
+
+.about-reference-purpose-accent.accent-1 {
+  background: #ef6a0d;
+}
+
+.about-reference-purpose-accent.accent-2 {
+  background: #a2672d;
+}
+
+.about-reference-purpose-accent.accent-3,
+.about-reference-purpose-accent.accent-4 {
+  background: #5b3a23;
+}
+
+.about-reference-purpose-content {
+  padding: 16px 20px 20px;
+}
+
+.about-reference-purpose-content b {
+  display: block;
+  margin-bottom: 9px;
+  color: #262626;
+  font-size: 21px;
+}
+
+.about-reference-purpose-content p {
+  margin: 0;
+  color: #5b3a23;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.about-reference-quote {
+  display: grid;
+  width: 100%;
+  min-height: 530px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0;
+}
+
+.about-reference-quote-image {
+  min-height: 530px;
+}
+
+.about-reference-quote-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-reference-quote-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+  background: #4b2b0e;
+}
+
+.about-reference-quote-mark {
+  position: absolute;
+  top: 28px;
+  left: 58px;
+  color: #ff9f5c;
+  font-family: Georgia, serif;
+  font-size: 100px;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.about-reference-quote-content blockquote {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 20px;
+  color: #fff;
+  font-family: Lora, Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.4;
+}
+
+.about-reference-quote-content cite {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.about-reference-quote-line {
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
+  background: #a2672d;
+}
+
+@media (max-width: 900px) {
+  .about-reference-purpose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .about-reference-aim-content {
+    flex-direction: column;
+  }
+
+  .about-reference-aim-content > h3 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-reference-hero {
+    min-height: 280px;
+    padding: 48px 32px;
+  }
+
+  .about-reference-aim {
+    padding: 60px 0;
+  }
+
+  .about-reference-aim-content {
+    gap: 32px;
+    padding-inline: 12px;
+  }
+
+  .about-reference-spirituality {
+    width: calc(100% - 48px);
+    min-height: 0;
+    gap: 32px;
+    padding: 58px 0;
+  }
+
+  .about-reference-purposes {
+    padding: 60px 0;
+  }
+
+  .about-reference-purposes-heading,
+  .about-reference-purpose-grid {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .about-reference-purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-reference-photo-section img {
+    height: 280px;
+  }
+
+  .about-reference-quote {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .about-reference-quote-image {
+    min-height: 280px;
+  }
+
+  .about-reference-quote-content {
+    min-height: 360px;
+    padding: 50px 30px;
+  }
+
+  .about-reference-quote-mark {
+    left: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-reference-container {
+    width: calc(100% - 24px);
+  }
+
+  .about-reference-hero {
+    min-height: 260px;
+    padding: 42px 18px;
+  }
+
+  .about-reference-description {
+    font-size: 12px;
+  }
+
+  .about-reference-aim {
+    padding: 44px 0;
+  }
+
+  .about-reference-aim h2 {
+    font-size: 36px;
+  }
+
+  .about-reference-aim p {
+    font-size: 12px;
+  }
+
+  .about-reference-aim h3 {
+    font-size: 22px;
+  }
+
+  .about-reference-aim-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-reference-spirituality {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 44px 0 50px;
+  }
+
+  .about-reference-spirituality-copy {
+    font-size: 12px;
+  }
+
+  .about-reference-spirituality-copy > span {
+    margin-top: 18px;
+  }
+
+  .about-reference-spirituality-card {
+    width: min(100%, 380px);
+    height: 300px;
+    justify-self: center;
+    border-top-right-radius: 60px;
+  }
+
+  .about-reference-purposes-heading h2 {
+    font-size: 38px;
+  }
+
+  .about-reference-purpose-card {
+    min-height: 0;
+  }
+
+  .about-reference-purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-reference-purpose-image {
+    height: 170px;
+  }
+
+  .about-reference-photo-section img {
+    height: 220px;
+  }
+
+  .about-reference-officers img {
+    height: 260px;
+  }
+
+  .about-reference-quote-image {
+    min-height: 220px;
+  }
+
+  .about-reference-quote-content {
+    min-height: 330px;
+    padding: 42px 22px;
+  }
+
+  .about-reference-quote-content blockquote {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,18 @@
+services:
+  lightfm:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:
+      MODEL_DIR: /data
+      LATENT_COMPONENTS: ${LATENT_COMPONENTS:-30}
+      TRAINING_EPOCHS: ${TRAINING_EPOCHS:-25}
+    ports:
+      - "127.0.0.1:8001:8000"
+    volumes:
+      - lightfm-models:/data
+    restart: unless-stopped
+
+volumes:
+  lightfm-models:

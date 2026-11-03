@@ -1,0 +1,43 @@
+.monasteries-reference{color:#3d3024;background:#fff}
+.monasteries-container,.region-section{width:min(1120px,calc(100% - 64px));margin-inline:auto}
+.monasteries-intro{padding:62px 0 18px;background:#fff}
+.monasteries-kicker{margin:0 0 11px;color:#a2672d;font-size:10px;font-weight:700;letter-spacing:.14em}
+.monasteries-intro h1{margin:0;color:#33271f;font-family:'Lora',Georgia,serif;font-size:48px;font-weight:600;line-height:1.12}
+.monasteries-intro h1 em{color:#a2672d;font-style:italic}
+.monasteries-lead{max-width:620px;margin:12px 0 18px;color:#766d65;font-size:13px;line-height:1.65}
+.monasteries-quote{max-width:760px;margin:18px 0 22px;padding:12px 16px;border-left:2px solid #bd8046;background:#fcf9f4;color:#55483e}
+.monasteries-quote p{margin:0;font-family:'Lora',Georgia,serif;font-size:12px;font-style:italic;line-height:1.55}
+.monasteries-quote cite{display:block;margin-top:5px;color:#8a7968;font-size:9px;font-style:normal;text-align:right}
+.monasteries-filters{display:flex;justify-content:flex-end;gap:10px;margin:0 0 24px}
+.monasteries-search,.monasteries-region-filter{display:flex;align-items:center;height:38px;padding:0 12px;border:1px solid #e4dbd1;border-radius:20px;background:#fff;color:#927f6c}
+.monasteries-search{width:min(300px,100%)}
+.monasteries-search input{width:100%;height:100%;padding:0 8px;border:0;outline:0;background:transparent;color:#3d3024;font-size:11px}
+.monasteries-region-filter{position:relative;width:150px;padding-right:10px;color:#704214}
+.monasteries-region-filter select{width:100%;height:100%;appearance:none;border:0;outline:0;background:transparent;color:#704214;font-size:11px;cursor:pointer}
+.monasteries-region-filter svg{flex:none;pointer-events:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.region-section{padding:0 0 44px;scroll-margin-top:90px}
+.region-section+.region-section{padding-top:9px}
+.region-header h2{margin:0;color:#3d3024;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:600}
+.region-header hr{margin:9px 0 15px;border:0;border-top:1px solid #e6ddd3}
+.monasteries-reference-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.monastery-reference-card{min-width:0;overflow:hidden;background:#f7f2ea}
+.monastery-reference-card>img{width:100%;height:150px;object-fit:cover}
+.monastery-card-content{display:flex;min-height:148px;flex-direction:column;gap:8px;padding:12px 14px 10px}
+.card-title-block h3{margin:0;color:#33271f;font-size:13px;font-weight:700;text-transform:none}
+.card-title-block p{margin:4px 0 0;color:#7c6a57;font-family:'Lora',Georgia,serif;font-size:10px;font-style:italic;line-height:1.35}
+.monastery-card-content dl{display:grid;gap:4px;margin:0}
+.monastery-card-content dl>div{display:grid;grid-template-columns:13px minmax(0,1fr);gap:5px;color:#66584a;font-size:9px;line-height:1.35}
+.monastery-card-content dt{color:#a2672d}
+.monastery-card-content dd{min-width:0;margin:0;overflow-wrap:anywhere}
+.monastery-card-content dd a:hover{color:#704214;text-decoration:underline}
+.monastery-project{padding-top:7px;border-top:1px solid #e8dfd4;font-size:9px}
+.monastery-project p{margin:3px 0 0;color:#6f655c}
+.card-actions{display:flex;align-items:center;gap:8px;width:100%;margin-top:auto;padding-top:6px}
+.btn-facebook{display:inline-flex;align-items:center;gap:5px;color:#315e96;font-size:9px;font-weight:600;white-space:nowrap}
+.facebook-mark{width:12px;height:12px;border-radius:2px;background:#2875cf;color:#fff;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:14px;text-align:center}
+.link-directions{display:inline-flex;align-items:center;gap:4px;margin-left:auto;color:#704214;font-size:9px;font-weight:600;white-space:nowrap}
+.link-directions:hover{color:#a2672d}
+.monasteries-empty{padding:60px 24px;text-align:center}
+@media(max-width:900px){.monasteries-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.monasteries-container,.region-section{width:calc(100% - 40px)}.monasteries-intro{padding:42px 0 16px}.monasteries-intro h1{font-size:38px}.monasteries-lead{font-size:12px}.monasteries-quote{margin:14px 0 18px;padding:10px 12px}.monasteries-quote p{font-size:11px}.monasteries-filters{justify-content:stretch}.monasteries-search{flex:1;min-width:0}.monasteries-region-filter{width:132px;flex:none}.region-section{padding-bottom:32px}.monastery-reference-card>img{height:140px}.monasteries-reference-grid{grid-template-columns:minmax(0,1fr);gap:12px}.monastery-card-content{min-height:0;padding:13px 14px}.card-title-block h3{font-size:14px}}

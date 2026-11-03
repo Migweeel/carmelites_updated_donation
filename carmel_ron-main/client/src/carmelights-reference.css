@@ -1,0 +1,52 @@
+.carmelights-page{padding-block:52px 82px}
+.carmelights-heading{padding:0 0 26px}
+.carmelights-heading h1{margin:0 0 16px;font-size:clamp(2.8rem,4.4vw,4.2rem);letter-spacing:-1.5px}
+.carmelights-heading .page-lead{max-width:970px;margin:0;color:#82776e;font-size:14px;line-height:1.75}
+.carmelights-discernment{min-height:36px;margin-top:12px;padding:0 12px;border-radius:4px;font-size:10px}
+.carmelights-most-viewed{padding:0 0 14px;border-bottom:1px solid #eadbca}
+.carmelights-most-viewed h2{margin:0 0 10px 4px;color:#33271f;font:600 19px/1.3 var(--serif)}
+.carmelights-popular-list{display:flex;flex-wrap:wrap;gap:12px;padding:0 26px}
+.carmelights-popular-card{width:min(372px,100%);min-height:80px;padding:10px 14px;border:1px solid #eadfD2;border-radius:6px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fffdfa;color:#b98042;text-align:left}
+.carmelights-popular-card:hover{border-color:#d6b38d;background:#fdf9f2}
+.carmelights-popular-card span{min-width:0;display:grid;gap:3px}
+.carmelights-popular-card small{color:#54795d;font-size:8px;font-weight:700;letter-spacing:.7px;text-transform:uppercase}
+.carmelights-popular-card b{overflow:hidden;color:#3b2a1e;font:600 15px/1.35 var(--serif);text-overflow:ellipsis;white-space:nowrap}
+.carmelights-popular-card em{color:#918579;font-size:9px;font-style:normal}
+.carmelights-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:25px 0 15px;padding-inline:5px}
+.carmelights-search{width:min(310px,100%);height:38px;padding:0 12px;border:1px solid #e8ded4;border-radius:22px;display:flex;align-items:center;gap:8px;background:#fff;color:#918579}
+.carmelights-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font-size:11px}
+.carmelights-categories{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.carmelights-categories button{position:relative;padding:5px 0;border:0;background:transparent;color:#665b51;font-size:10px;font-weight:600}
+.carmelights-categories button.active{color:#3b2a1e}
+.carmelights-categories button.active:after{position:absolute;right:0;bottom:-4px;left:0;height:1px;background:#b98042;content:''}
+.carmelights-teaching-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.carmelights-teaching-card{min-width:0;min-height:250px;padding:16px 20px 14px;border:1px solid #efdfc9;border-radius:6px;display:flex;flex-direction:column;background:linear-gradient(135deg,#fffdfa,#fbf8f2);transition:border-color .2s,transform .2s}
+.carmelights-teaching-card:hover{transform:translateY(-2px);border-color:#d9bd9b}
+.carmelights-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.carmelights-category-tag{padding:4px 7px;background:#edf1e9;color:#54795d;font-size:8px;font-weight:700;letter-spacing:.45px;text-transform:uppercase}
+.carmelights-teaching-card .favorite-teaching{position:static;width:32px;height:32px;border:1px solid #e9ded1;border-radius:50%;display:grid;place-items:center;background:#fffdfa;color:#8b6a4d}
+.carmelights-teaching-card .favorite-teaching.saved{border-color:#d77e6d;background:#fff4f1;color:#b8443c}
+.carmelights-card-eyebrow{margin:0 0 7px;color:#a38b73;font-size:7px;font-weight:700;letter-spacing:1.15px}
+.carmelights-teaching-card h2{margin:0 0 2px;color:#3b2a1e;font:600 19px/1.3 var(--serif)}
+.carmelights-card-author{color:#b66e2f;font-size:9px;font-weight:600}
+.carmelights-teaching-card p{margin:12px 0 16px;color:#766c62;font-size:10px;line-height:1.7}
+.carmelights-read-link{width:100%;margin-top:auto;padding:10px 0 0;border:0;border-top:1px solid #eee5db;display:flex;align-items:center;justify-content:space-between;background:transparent;color:#79512f;font-size:9px;font-weight:700}
+.carmelights-read-link span{display:flex;align-items:center;gap:7px}
+.carmelights-read-link:hover{color:#b98042}
+@media(max-width:850px){.carmelights-toolbar{align-items:flex-start;flex-direction:column;gap:16px}.carmelights-search{width:100%;max-width:360px}.carmelights-teaching-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.carmelights-page{padding-block:42px 60px}.carmelights-heading h1{font-size:2.7rem}.carmelights-heading .page-lead{font-size:12px}.carmelights-most-viewed h2{font-size:17px}.carmelights-popular-list{padding:0;gap:8px}.carmelights-popular-card{min-height:70px}.carmelights-toolbar{margin-block:20px 14px}.carmelights-categories{gap:12px}.carmelights-categories button{font-size:9px}.carmelights-teaching-grid{grid-template-columns:1fr;gap:10px}.carmelights-teaching-card{min-height:220px;padding:15px 17px}.carmelights-teaching-card h2{font-size:18px}}
+.carmelights-reading-backdrop{position:fixed;z-index:70;inset:0;padding:28px;display:grid;place-items:center;overflow-y:auto;background:rgba(48,36,26,.42);animation:fade-up .2s both}
+.carmelights-reading-dialog{position:relative;width:min(660px,100%);max-height:min(820px,calc(100vh - 56px));overflow-y:auto;padding:42px 48px;background:#fffdfa;border-radius:10px;box-shadow:0 24px 70px rgba(29,19,13,.22)}
+.carmelights-reading-dialog>.carmelights-category-tag{display:inline-block;margin-bottom:16px;padding:6px 9px;font-size:10px}
+.carmelights-reading-close{position:absolute;top:20px;right:20px;width:42px;height:42px;border:1px solid #eee5db;border-radius:50%;display:grid;place-items:center;background:#fffdfa;color:#725c48}
+.carmelights-reading-close:hover{background:#f5eee6}
+.carmelights-reading-eyebrow{display:block;color:#a38b73;font-size:10px;font-weight:700;letter-spacing:1.5px}
+.carmelights-reading-dialog h2{max-width:530px;margin:12px 0 7px;color:#3b2a1e;font:600 clamp(30px,4vw,38px)/1.2 var(--serif)}
+.carmelights-reading-author{display:block;color:#b66e2f;font-size:14px}
+.carmelights-reading-copy{margin-top:22px}
+.carmelights-reading-copy p{margin:0 0 1.1em;color:#65594f;font-size:18px;line-height:1.85}
+.carmelights-reading-copy p:last-child{margin-bottom:0}
+.carmelights-prayer-prompt{margin-top:22px;padding:18px 20px;border-left:3px solid #c9a67a;background:#f7f2eb}
+.carmelights-prayer-prompt b{display:block;margin-bottom:6px;color:#a3794f;font-size:10px;letter-spacing:1.2px}
+.carmelights-prayer-prompt p{margin:0;color:#65594f;font:italic 17px/1.75 var(--serif)}
+@media(max-width:560px){.carmelights-reading-backdrop{padding:16px}.carmelights-reading-dialog{max-height:calc(100vh - 32px);padding:34px 25px 28px;border-radius:8px}.carmelights-reading-dialog>.carmelights-category-tag{margin-bottom:13px}.carmelights-reading-close{top:14px;right:14px;width:40px;height:40px}.carmelights-reading-dialog h2{padding-right:20px;font-size:30px}.carmelights-reading-author{font-size:14px}.carmelights-reading-copy{margin-top:18px}.carmelights-reading-copy p{font-size:17px;line-height:1.8}.carmelights-prayer-prompt{padding:15px}.carmelights-prayer-prompt p{font-size:16px}}

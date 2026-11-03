@@ -1,0 +1,5 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+lightfm==1.17
+numpy==1.26.4
+scipy==1.13.1

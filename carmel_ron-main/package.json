@@ -1,0 +1,15 @@
+{
+  "name": "carmels-in-communion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c green,blue \"npm --prefix client run dev -- --host 0.0.0.0\" \"npm --prefix server run dev\"",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "db:generate": "npm --prefix server run db:generate",
+    "db:push": "npm --prefix server run db:push",
+    "db:seed": "npm --prefix server run db:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

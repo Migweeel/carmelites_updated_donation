@@ -1,0 +1,250 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  FORMATOR
+  USER
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  ANONYMOUS
+}
+
+enum DonationType {
+  ONE_TIME
+  MONTHLY
+}
+
+enum PaymentMethod {
+  QRPH
+  GCASH
+  MAYA
+  BANK
+  CARD
+}
+
+enum DonationStatus {
+  PENDING
+  RECONCILING
+  VERIFIED
+  COMPLETED
+  FAILED
+}
+
+enum SenderType {
+  VISITOR
+  ADMIN
+  FORMATOR
+}
+
+enum ContentInteractionType {
+  VIEW
+  BOOKMARK
+  UNBOOKMARK
+}
+
+enum MessageCategory {
+  DONATION
+  DISCERNER
+  GENERAL
+}
+
+enum DiscernmentStage {
+  EXPLORING
+  PRAYING_AND_LEARNING
+  READY_TO_VISIT
+  IN_CONVERSATION
+}
+
+model User {
+  id           String      @id @default(cuid())
+  name         String
+  email        String      @unique
+  gender       Gender      @default(ANONYMOUS)
+  phone        String      @default("")
+  address      String      @default("")
+  privacyConsentAt      DateTime?
+  privacyPolicyVersion  String?
+  passwordHash String
+  role         Role        @default(USER)
+  isActive     Boolean     @default(true)
+  canManageUsers   Boolean @default(false)
+  canManageDetails Boolean @default(false)
+  canManageUpdates Boolean @default(false)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  auditLogs    AuditLog[]
+  discernment  Discernment?
+  conversations Conversation[] @relation("UserConversations")
+  staffConversations Conversation[] @relation("StaffConversations")
+  sentMessages Message[] @relation("UserMessages")
+  contentInteractions ContentInteraction[]
+}
+
+model Discernment {
+  id         String           @id @default(cuid())
+  userId     String           @unique
+  user       User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  stage      DiscernmentStage @default(EXPLORING)
+  monastery  String           @default("")
+  note       String           @default("")
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+
+  @@index([stage, updatedAt])
+}
+
+model Monastery {
+  id          String     @id @default(cuid())
+  name        String
+  city        String
+  slug        String     @unique
+  description String     @default("")
+  imageUrl    String?
+  address     String?
+  contact     String?
+  sortOrder   Int        @default(0)
+  donations   Donation[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model Donation {
+  id                    String         @id @default(cuid())
+  referenceCode         String         @unique
+  amount                Decimal        @db.Decimal(10, 2)
+  type                  DonationType   @default(ONE_TIME)
+  fund                  String
+  paymentMethod         PaymentMethod
+  xenditInvoiceId       String?        @unique
+  xenditInvoiceUrl      String?
+  paymongoPaymentIntentId String?       @unique
+  paymongoQrImageUrl      String?
+  paymongoQrExpiresAt     DateTime?
+  isManual              Boolean        @default(false)
+  isAnonymous           Boolean        @default(true)
+  donorName             String?
+  donorEmail            String?
+  donorPhone            String?
+  wantsReceipt          Boolean        @default(false)
+  paymentReference      String?
+  beneficiaryMonasteryId String?
+  beneficiaryMonastery  Monastery?     @relation(fields: [beneficiaryMonasteryId], references: [id], onDelete: SetNull)
+  status                DonationStatus @default(PENDING)
+  files                 DonationFile[]
+  createdAt             DateTime       @default(now())
+  updatedAt             DateTime       @updatedAt
+
+  @@index([status, createdAt])
+  @@index([createdAt])
+}
+
+model DonationFile {
+  id         String   @id @default(cuid())
+  donationId String
+  donation   Donation @relation(fields: [donationId], references: [id], onDelete: Cascade)
+  fileUrl    String
+  type       String
+  fileName   String?
+  createdAt  DateTime @default(now())
+}
+
+model Conversation {
+  id            String          @id @default(cuid())
+  userId        String?
+  user          User?           @relation("UserConversations", fields: [userId], references: [id], onDelete: Cascade)
+  staffRecipientId String?
+  staffRecipient User?           @relation("StaffConversations", fields: [staffRecipientId], references: [id], onDelete: SetNull)
+  name          String
+  email         String
+  subject       String
+  category      MessageCategory @default(GENERAL)
+  isRead        Boolean         @default(false)
+  lastMessageAt DateTime        @default(now())
+  messages      Message[]
+  createdAt     DateTime        @default(now())
+
+  @@index([lastMessageAt])
+  @@index([userId, lastMessageAt])
+  @@index([staffRecipientId, lastMessageAt])
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderId       String?
+  sender         User?        @relation("UserMessages", fields: [senderId], references: [id], onDelete: SetNull)
+  senderType     SenderType
+  body           String
+  readAt         DateTime?
+  createdAt      DateTime     @default(now())
+
+  @@index([conversationId, createdAt])
+}
+
+model Update {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  body        String
+  coverImage  String?
+  category    String
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PageContent {
+  id        String   @id @default(cuid())
+  pageKey   String   @unique
+  blocks    Json
+  updatedAt DateTime @updatedAt
+}
+
+model ContentInteraction {
+  id         String                  @id @default(cuid())
+  userId     String?
+  user       User?                   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  readingId  String
+  eventType  ContentInteractionType
+  dedupeKey  String                  @unique
+  createdAt  DateTime                @default(now())
+
+  @@index([eventType, createdAt])
+  @@index([readingId, eventType, createdAt])
+  @@index([userId, readingId, createdAt])
+}
+
+model FAQ {
+  id         String   @id @default(cuid())
+  question   String
+  answer     String
+  sortOrder  Int      @default(0)
+  isPublished Boolean @default(true)
+  updatedAt  DateTime @updatedAt
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String
+  entity    String
+  entityId  String?
+  meta      Json?
+  createdAt DateTime @default(now())
+
+  @@index([entity, createdAt])
+  @@index([userId, createdAt])
+}

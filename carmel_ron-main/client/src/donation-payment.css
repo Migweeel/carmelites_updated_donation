@@ -1,0 +1,102 @@
+.payment-instructions {
+  grid-template-columns: minmax(112px, 145px) minmax(0, 1fr);
+  align-items: center;
+}
+
+.payment-instructions.xendit-checkout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.payment-instructions .qr-placeholder {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.payment-instructions label,
+.payment-instructions .full-button {
+  grid-column: 1 / -1;
+}
+
+.payment-option.unavailable,
+.payment-option.unavailable:hover {
+  border-color: #e8e0d8;
+  background: #f7f5f2;
+  color: #867d74;
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.payment-option.unavailable .payment-unavailable-label {
+  margin-left: auto;
+  color: #8a8178;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.donation-verification-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(38 29 22 / 58%);
+}
+
+.donation-verification-dialog {
+  width: min(460px, 100%);
+  padding: 32px;
+  border: 1px solid #eee5db;
+  border-radius: 8px;
+  background: #fffdfa;
+  box-shadow: 0 24px 70px rgb(29 19 13 / 30%);
+  text-align: center;
+}
+
+.donation-verification-dialog .confirm-icon {
+  margin: 0 auto 18px;
+}
+
+.donation-verification-dialog h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(24px, 5vw, 32px);
+}
+
+.donation-verification-dialog p {
+  margin-bottom: 22px;
+  color: #6f6257;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.donation-verification-dialog .button {
+  min-width: 150px;
+}
+
+@media (max-width: 520px) {
+  .payment-instructions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .payment-option.unavailable .payment-unavailable-label {
+    font-size: 9px;
+  }
+
+  .donation-verification-dialog {
+    padding: 25px 20px;
+  }
+
+  .payment-instructions .qr-placeholder {
+    grid-row: auto;
+    width: 112px;
+    justify-self: center;
+  }
+
+  .payment-instructions > div:nth-child(2) {
+    text-align: center;
+  }
+}

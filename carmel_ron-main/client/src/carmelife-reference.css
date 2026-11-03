@@ -1,0 +1,343 @@
+.carmelife-page {
+  --life-bg: #faf8f5;
+  --life-alt: #f4efea;
+  --life-card: #f3efe9;
+  --life-text: #3d2e24;
+  --life-muted: #6b5b52;
+  --life-gold: #c08246;
+  --life-dark: #2e231c;
+  color: var(--life-text);
+  background: var(--life-bg);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.carmelife-page h1,
+.carmelife-page h2,
+.carmelife-page h3,
+.carmelife-page blockquote {
+  font-family: Lora, Georgia, serif;
+}
+
+.carmelife-page .life-hero,
+.carmelife-page .life-section,
+.carmelife-page .life-quote-banner {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.carmelife-page .life-hero {
+  position: relative;
+  height: 460px;
+  padding-top: 1.5rem;
+}
+
+.carmelife-page .life-hero > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.carmelife-page .life-hero-overlay {
+  position: absolute;
+  inset: 1.5rem 1.5rem 0;
+  border-radius: 1rem;
+  background: linear-gradient(to top, #2e231cb3, transparent 65%);
+}
+
+.carmelife-page .life-hero h1 {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+}
+
+.carmelife-page .life-quote-banner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border: 1px solid #c0824633;
+  border-radius: 0.5rem;
+  background: var(--life-alt);
+  font: italic 1rem Lora, Georgia, serif;
+  text-align: center;
+}
+
+.carmelife-page .life-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.carmelife-page .face-of-god {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.carmelife-page .life-copy h2 {
+  font-size: clamp(1.35rem, 2.7vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.carmelife-page .life-copy p,
+.carmelife-page .life-prose p,
+.carmelife-page .discernment-copy p {
+  margin-top: 1.5rem;
+  color: var(--life-muted);
+  line-height: 1.75;
+}
+
+.carmelife-page .life-copy cite {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--life-gold);
+  font: italic 0.85rem Lora, Georgia, serif;
+}
+
+.carmelife-page .rounded-life-image {
+  height: 320px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px #3d2e241a;
+}
+
+.carmelife-page .rounded-life-image img,
+.carmelife-page .wide-life-image img,
+.carmelife-page .life-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carmelife-page .centered-life-heading > h2,
+.carmelife-page .discernment-section-life > h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  text-align: center;
+}
+
+.carmelife-page .centered-life-heading h2 em,
+.carmelife-page .discernment-section-life h2 em,
+.carmelife-page .discernment-copy h3 {
+  color: var(--life-gold);
+  font-style: italic;
+}
+
+.carmelife-page .life-prose {
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.carmelife-page .life-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.carmelife-page .life-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: var(--life-card);
+  box-shadow: 0 2px 8px #3d2e240d;
+}
+
+.carmelife-page .life-card > img {
+  height: 210px;
+}
+
+.carmelife-page .life-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.carmelife-page .life-card small {
+  color: var(--life-gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.carmelife-page .life-card h3 {
+  margin: 0.35rem 0;
+  font-size: 1.15rem;
+}
+
+.carmelife-page .life-card p {
+  color: var(--life-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.carmelife-page .life-card a,
+.carmelife-page .life-card button {
+  margin-top: auto;
+  padding: 1.25rem 0 0;
+  border: 0;
+  background: none;
+  color: var(--life-dark);
+  font: 700 0.75rem Inter, system-ui, sans-serif;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.carmelife-page .life-card a:hover,
+.carmelife-page .life-card button:hover {
+  color: var(--life-gold);
+}
+
+.carmelife-page .discernment-section-life > h2 {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.carmelife-page .wide-life-image {
+  height: 520px;
+  overflow: hidden;
+  border: 1px solid #c0824633;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px #3d2e241a;
+}
+
+.carmelife-page .discernment-copy {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.carmelife-page .discernment-copy h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.carmelife-page .discernment-copy p {
+  text-align: left;
+}
+
+.carmelife-page .life-slider-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  border-top: 1px solid #c0824633;
+  border-bottom: 1px solid #c0824633;
+  background: var(--life-alt);
+  text-align: center;
+}
+
+.carmelife-page .life-slider-quote button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #c0824666;
+  border-radius: 50%;
+  background: none;
+  color: var(--life-gold);
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.carmelife-page .life-slider-quote blockquote {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+.carmelife-page .life-slider-quote cite {
+  display: block;
+  margin-top: 1rem;
+  color: var(--life-gold);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.carmelife-page .life-stories-section {
+  padding-top: 1rem;
+}
+
+.carmelife-page .life-stories-section .centered-life-heading > p {
+  margin-top: 1rem;
+  color: var(--life-muted);
+  text-align: center;
+}
+
+.carmelife-page .life-stories-more {
+  display: flex;
+  width: fit-content;
+  margin: 2rem auto 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+  .carmelife-page .face-of-god {
+    grid-template-columns: 1fr;
+  }
+
+  .carmelife-page .life-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carmelife-page .life-hero {
+    height: 340px;
+  }
+
+  .carmelife-page .life-hero h1 {
+    left: 2.5rem;
+  }
+
+  .carmelife-page .wide-life-image {
+    height: 360px;
+  }
+
+}
+
+@media (max-width: 560px) {
+  .carmelife-page .life-hero {
+    height: 280px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .carmelife-page .life-hero-overlay {
+    inset: 1.5rem 1rem 0;
+  }
+
+  .carmelife-page .life-hero h1 {
+    left: 2rem;
+  }
+
+  .carmelife-page .life-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .carmelife-page .life-slider-quote {
+    gap: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .carmelife-page .life-slider-quote button {
+    flex: none;
+  }
+
+  .carmelife-page .life-quote-banner {
+    font-size: 0.85rem;
+  }
+}
